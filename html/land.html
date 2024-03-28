@@ -1,62 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webpage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<style>
-    header{
-        background-image: url(https://pikwizard.com/pw/small/86e477f628ed74312370103f1848d09d.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height:70vh;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+    <style>
+        header {
+            background-image: url(https://pikwizard.com/pw/small/86e477f628ed74312370103f1848d09d.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
 
-    }
 
-    .hero-title{
-        font-size: 3.5rem;
-        text-shadow: 1px 1px black;
+        }
 
-        
-    }
+        .hero-title {
+            font-size: 3.5rem;
+            text-shadow: 1px 1px black;
+            font-weight: bolder;
 
-</style>
+
+        }
+
+        .hero-subtitle {
+            text-shadow: 1px 2px black;
+        }
+
+        .feature-card {
+            box-shadow: 2px 2px 5px black;
+            
+        }
+        .feature-card:hover{
+            transform:scale(1,1);
+            transition:0.5s;
+            background-color: blueviolet;
+            color: blue;
+        }
+        video{
+            height: 200px;
+            width: 100%;
+            object-fit : cover;
+        }
+        .signup-content{
+            position: absolute;
+            text-align: center;
+            color: white;
+        }
+        .vid{
+            position: relative;
+        }
+    </style>
 
 </head>
+
 <body>
     <header>
-        <h1 class="hero- title"> WELCOME TO MY WEBSITE</h1>
-        <h5 class="hero-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis optio unde numquam ea maiores.
+        <h1 class="hero- title "> WELCOME TO MY WEBSITE</h1>
+        <h5 class="hero-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis optio unde
+            numquam ea maiores.
         </h5>
-        <button class="btn btn-primary">Learn More</button>
+        <button class="btn btn-danger">Learn More</button>
     </header>
     <!-- main -->
     <!-- about section -->
-    <section>
-        <div class="container">
-            <div class="card">
+    <section class="mt-5 mb-5">
+        <div class="container d-flex justify-content-center">
+            <div class="card bg-dark w-75 ">
                 <div class="row">
                     <div class="col-md-6">
+                        <img class="w-100" src="https://media.wired.com/photos/626742b1d59c89e6ded93a0e/4:3/w_2132,h_1599,c_limit/Smiley-Faces-Submit-Own-Emoji-Culture-1207566766.jpg">
 
                     </div>
                     <div class="col-md-6">
-                        <h5>About Us</h5>
+                        <h5 class="text-center text-light p-3">About Us</h5>
+                        <p class="text-center text-light p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Magni odio quis modi quibusdam quam quod. </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="mt-5 mb-5">
-        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="text-center mb-5">OUR FEATURES
-        
-        </h1>
+        <h1 class="text-center mb-5">OUR FEATURES</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-card text-center">
+                        <i class=" fa-4x fa-solid fa-handshake"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia architecto, eius hic molestias magni facilis.</p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card feature-card text-center">
+                        <i class=" fa-4x fa-solid fa-hands-holding-circle"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident similique eaque minima animi dolorem suscipit!.</p>
+                    </div>
+                </div>
+
+            
+            <div class="col-md-4">
+                <div class="card feature-card text-center">
+                    <i class=" fa-4x fa-solid fa-hands-praying"></i>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio qui quaerat cum dolores nam nobis!</p>
+                </div>
+            </div>
+        </div>
+
     </section>
+    <!-- signup section -->
+    <h1 class="text-center mb-5" style="font-weight:bolder; font-size:50px"> Want to learn more</h1>
+<div class="container vid d-flex justify-content-center align-items-center">
+    <div class="signup-content " style="z-index:2">
+        <h5>Signup for 30% discont</h5>
+        <p>Want to get an instant discount<br> for best offers</p>
+        <input type="text" placeholder="Enter your email">
+        <button  class="btn btn-primary"> Signup</button>
+    </div>
     
+    <video class="video" src="/WhatsApp Video 2024-03-21 at 08.38.57_a2b532a4.mp4 "  autoplay loop muted></video>
+</div>
+<footer class="bg-body-tertiary text-center">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Images -->
+      <section class="">
+        <div class="row">
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+            <div data-mdb-ripple-init
+              class="bg-image hover-overlay shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+              <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp" class="w-100" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Images -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 </body>
+
 </html>

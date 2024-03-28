@@ -1,0 +1,21 @@
+
+body{
+    background: url(https://png.pngtree.com/thumb_back/fh260/background/20221226/pngtree-technology-background-blue-background-technology-line-website-poster-background-image_1498278.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+width:100%;
+
+
+}
+.container{
+    height: 90%;
+    width:90%;
+    /* background: linear-gradient(rgba(64, 16, 210, 0.8),rgba(64, 16, 210, 0.8)); */
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

@@ -36,3 +36,48 @@ console.log(fruit)
 
 let index =fruit.indexOf('mango')
 console.log(index)
+ 
+console.log('-------------------------')
+let num =[1,2,3,4,5,6,7,8,9,10]
+// iteration using
+for(let i=0;i<num.length;i++){
+    console.log(num[i]**2)
+}
+console.log('---------------')
+ //iteration using forEach
+num.forEach((i)=> {
+    console.log(i**2)
+})
+console.log('-----------')
+//interate using map
+let square=num.map((x) => x**2)
+console.log(square)
+console.log('------------')
+//filter function 
+let evenNum =[]
+for( let i=0;i<num.length;i++){
+    if(i%2==0){
+        evenNum.push(i)
+    }
+}
+console.log(evenNum)
+
+
+let even =num.filter((x)=> x%2==0)
+console.log(even)
+
+let odd =num.filter((x)=> x%2!=0)
+console.log(odd)
+
+
+//print a array of color
+let color=['red','blue','violet','pink','skyblue','safron','yellow']
+let newcolor =color.filter((x)=> x.length>4)
+console.log(newcolor)
+
+
+//print 1000 bt 3000
+let nums =[999.1000,2453,2345,4567,2678,2567]
+let findnums= nums.filter((x)=>x.length>3000 & x.length<1000)
+console.log(findnums)
+

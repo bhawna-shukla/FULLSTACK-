@@ -81,3 +81,8 @@ let nums =[999.1000,2453,2345,4567,2678,2567]
 let findnums= nums.filter((x)=>x.length>3000 & x.length<1000)
 console.log(findnums)
 
+
+console.log('-----------------------')
+let price=[1088,2345,2467,2345,3542,2999]
+let newprice=price.filter((x)=> x>=1000 && x<=3000)
+console.log(newprice)

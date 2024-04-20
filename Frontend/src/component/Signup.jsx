@@ -1,7 +1,7 @@
 import React from 'react'
 import {useFormik}from 'formik'
 import * as Yup from 'Yup'
-import { EnqueueSnackbar } from 'notistack'
+import { enqueueSnackbar } from 'notistack'
 
 
 
@@ -14,7 +14,7 @@ const SignupSchema =Yup.object().shape({
   .required('Email is requied')
   .email('Email is invalid'),
   password :Yup.string()
-  .required('password is required')
+  .required('Password is required')
   .min(8, 'at least 8 characters')
   .max(15,'at least 15 characters')
 
@@ -32,16 +32,32 @@ const Signup = () => {
 
     },
   
-    onSubmit :(values,{resetForm}) =>{
-      console.log(values)
-      EnqueueSnackbar('Signup succsessfully',{varient:'success'})
-      resetForm()
-    },
+   onSubmit : async(values , action) =>{
+    console.log(values);
+    const res = await fetch ('http://localhost:3000/user/add',{
+      method : 'POST',
+      body : JSON.stringify(values),
+      headers:{
+   'Content-Type': 'application/json'
+    }
     
-    validationSchema:SignupSchema
+    }); 
+    console.log(res.status)
+      action.resetForm()
+
+      if (res.status == 200) {
+        enqueueSnackbar('Signup Successful', { variant: 'success' })
+      }
+      else {
+        enqueueSnackbar('Signup Failed', { variant: 'error' })
+      }
+    },
+                
+   
+    validationSchema :SignupSchema
   })
     return (
-        <div className='container'>
+       <div className='container'>
             <div className="col">
                 <div className="card w-25 d-block mx-auto">
                     <div className="card-header">
@@ -68,9 +84,9 @@ const Signup = () => {
                           {/* styling  */}
                             <span style={{color:'red',fontsize:'10'}}>{signupForm.touched.email && signupForm.errors.email}</span>
                             <input type="text" className="form-control mb-4" 
-                            id="Email"
+                            id="email"
                             onChange={signupForm.handleChange}
-                            value={signupForm.values.Email}/>
+                            value={signupForm.values.email}/>
                         </div>
                         <div className="form-group">
                             <label>Password</label>

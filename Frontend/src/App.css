@@ -1,14 +1,125 @@
-header{
-    background-image: url('https://png.pngtree.com/background/20230317/original/pngtree-summer-seaside-cool-vacation-background-picture-image_2149087.jpg');
-    height: 100vh;
-    background-size: cover;
-   color: black;
-   font-size: larger;
-    
+main{
+  background-image: url('https://cdn.dribbble.com/users/1602563/screenshots/8869646/media/ddc33ce2c8e2570c410123f375e2c35c.gif');
+  height: 100vh;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+   
 }
 .front{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ font-size: 20px;
+
+}
+
+
+
+
+
+.head{
+  /* background-image: url("https://wonderfulengineering.com/wp-content/uploads/2014/05/twitter-header-photo-21.jpg"); */
+  height: 80vh;
+  color: white;
+  text-align: center;
+}
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+ 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+ 
+
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: 400px;
+
+  padding: 10px 30px;
+}
+
+.card_title {
+  text-align: center;
+  padding: 10px;
+}
+
+.card_title h1 {
+  font-size: 26px;
+  font-weight: bold;
+ 
+}
+
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+.form button {
+  
+  background-color: #4796ff;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.card_terms {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.card_terms input[type="checkbox"] {
+  background-color: #e2e2e2;
+}
+
+.card_terms span {
+  margin: 5px;
+  font-size: 13px;
+}
+
+.card a {
+  color: #4796ff;
+  text-decoration: none;
 }
